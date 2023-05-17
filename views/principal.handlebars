@@ -1,0 +1,23 @@
+<div class="container-fluid px-5 bg-dark-subtle">
+    <h1 class="pt-3 text-center">Resumo de assunto para criança de fundamental </h1>
+
+    <form action="/" method="post" class="px-5 mx-5 py-5">
+        <div class="mx-auto p-2" style="width: 65%;">
+            <div>
+                <label for="prompt" class="form-label pt-2">Insira o assunto que você quer resumir: </label>
+                <input type="text" name="prompt" class="form-control" id="prompt">
+            </div>
+            <div>
+                            <button class="btn btn-success my-4 text-white" id="btngerar">Gerar Resumo</button>
+            </div>
+        </div>
+    </form>
+    <h2 class="pt-3 text-center">Resultado: </h2>
+    <div class="mx-auto p-2">
+        <ul class="list-group">
+            {{#each response}}
+            <li class="list-group-item list-group-item-dark">{{this}}</li>
+            {{/each}}
+        </ul>
+    </div>
+</div>
